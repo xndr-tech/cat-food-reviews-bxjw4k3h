@@ -3,389 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Purrfect Palate Reviews provides unbiased, in-depth reviews and comparisons of the best cat food brands to help you make informed choices for your feline friend's health and happiness.">
-    <title>Purrfect Palate Reviews - Your Guide to the Best Cat Food</title>
+    <title>Purrfect Bites Reviews - Your Guide to Cat Food</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..18,100..1000;1,9..18,100..1000&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #e07a5f; /* Coral theme */
-            --secondary-color: #fdf4f2; /* Light background/accent */
-            --text-color: #3d405b; /* Dark blue-gray */
-            --background-light: #f4f1de; /* A slightly darker light background */
-            --background-medium: #f2cc8f; /* Original medium background */
-            --accent-color: #81b29a; /* Original accent - green-ish */
-            --white: #ffffff;
-            --gray-light: #e0e0e0;
-            --border-radius-soft: 8px;
-            --transition-speed: 0.3s ease;
+            --primary-color: #e07a5f;
+            --secondary-color: #3d405b;
+            --background-light: #f4f1de;
+            --background-dark: #81b29a;
+            --text-color: #333;
+            --white-color: #ffffff;
         }
 
-        /* Base styles */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: 'DM Sans', sans-serif;
-            color: var(--text-color);
             line-height: 1.6;
+            color: var(--text-color);
             background-color: var(--background-light);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 700;
-            margin-bottom: 0.8em;
-            color: var(--primary-color);
-        }
-
-        h1 { font-size: 2.8em; }
-        h2 { font-size: 2.2em; }
-        h3 { font-size: 1.8em; }
-
-        p {
-            margin-bottom: 1em;
-        }
-
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color var(--transition-speed);
-        }
-
-        a:hover {
-            color: var(--accent-color);
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 20px;
         }
 
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 0.8em 1.8em;
-            background-color: var(--primary-color);
-            color: var(--white);
-            border: none;
-            border-radius: var(--border-radius-soft);
-            font-size: 1.1em;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background-color var(--transition-speed), transform var(--transition-speed);
-        }
-
-        .btn:hover {
-            background-color: #c9674c; /* Slightly darker primary */
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background-color: var(--accent-color);
-        }
-
-        .btn-secondary:hover {
-            background-color: #6a9580; /* Slightly darker accent */
-        }
-
-        /* Header & Navigation */
-        .header {
-            background-color: var(--white);
+        header {
+            background-color: var(--secondary-color);
+            color: var(--white-color);
             padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .header .container {
+        header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 1.8em;
+            font-size: 1.8rem;
             font-weight: 700;
-            color: var(--text-color);
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
+            color: var(--primary-color);
+            text-decoration: none;
         }
 
-        .logo span {
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: var(--white-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
             color: var(--primary-color);
         }
 
-        .nav-menu {
-            list-style: none;
-            display: flex;
-        }
-
-        .nav-menu li {
-            margin-left: 2.5rem;
-        }
-
-        .nav-menu a {
-            color: var(--text-color);
-            font-weight: 400;
-            font-size: 1.1em;
-            padding: 0.5rem 0;
-            position: relative;
-        }
-
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary-color);
-            transition: width var(--transition-speed);
-        }
-
-        .nav-menu a:hover::after {
-            width: 100%;
-        }
-
-        /* Hamburger Menu */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 10px;
-            background: none;
-            border: none;
-        }
-
-        .hamburger span {
-            height: 3px;
-            width: 25px;
-            background-color: var(--text-color);
-            margin-bottom: 5px;
-            border-radius: 2px;
-            transition: all var(--transition-speed);
-        }
-
-        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(253, 244, 242, 0.8), rgba(253, 244, 242, 0.8)), url('https://images.unsplash.com/photo-1548692224-ad8b5f3a0a65?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
-            color: var(--text-color);
-            padding: 6rem 0;
+            background-color: var(--primary-color);
+            color: var(--white-color);
             text-align: center;
+            padding: 80px 20px;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            min-height: 70vh;
+            min-height: 50vh;
         }
 
         .hero h1 {
-            color: var(--primary-color);
-            font-size: 3.5em;
-            margin-bottom: 0.5em;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            font-weight: 700;
         }
 
         .hero p {
-            font-size: 1.4em;
-            max-width: 800px;
-            margin: 0 auto 2em auto;
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            max-width: 700px;
         }
 
-        /* Section Styling */
-        section {
-            padding: 4rem 0;
-        }
-
-        section:nth-of-type(even) {
-            background-color: var(--secondary-color); /* Use secondary color for alternate sections */
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.5em;
-            position: relative;
+        .btn {
             display: inline-block;
-            padding-bottom: 0.3em;
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
         }
 
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 0;
-            width: 60px;
-            height: 4px;
-            background-color: var(--primary-color);
-            border-radius: 2px;
+        .btn:hover {
+            background-color: #5a5f7e;
+            transform: translateY(-2px);
         }
 
-        /* Features Section */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+        .section-heading {
             text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--secondary-color);
+            font-weight: 700;
         }
 
-        .feature-item {
-            background-color: var(--white);
-            padding: 2rem;
-            border-radius: var(--border-radius-soft);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform var(--transition-speed);
+        .features, .about, .contact {
+            padding: 80px 0;
         }
 
-        .feature-item:hover {
-            transform: translateY(-5px);
+        .features {
+            background-color: var(--background-light);
         }
 
-        .feature-item i {
-            font-size: 3em;
-            color: var(--primary-color);
-            margin-bottom: 0.8em;
-        }
-
-        .feature-item h3 {
-            font-size: 1.4em;
-            margin-bottom: 0.6em;
-            color: var(--text-color);
-        }
-
-        /* About Section */
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-        }
-
-        .about-content img {
-            max-width: 50%;
-            height: auto;
-            border-radius: var(--border-radius-soft);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-text h3 {
-            color: var(--text-color);
-        }
-
-        /* Reviews Section */
-        .reviews-grid {
+        .feature-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
+            gap: 30px;
         }
 
-        .review-card {
-            background-color: var(--white);
-            padding: 2rem;
-            border-radius: var(--border-radius-soft);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        .card {
+            background-color: var(--white-color);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .review-card h3 {
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
             color: var(--primary-color);
-            font-size: 1.5em;
-            margin-bottom: 0.5em;
+            font-weight: 600;
         }
 
-        .review-card .rating {
-            color: #ffc107; /* Star color */
-            margin-bottom: 1em;
-            font-size: 1.2em;
+        .card p {
+            font-size: 1rem;
+            color: #555;
         }
 
-        .review-card .author {
-            font-style: italic;
-            color: var(--text-color);
-            margin-top: 1em;
+        .about {
+            background-color: var(--background-dark);
+            color: var(--white-color);
         }
 
-        /* Contact Section */
-        .contact-content {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 3rem;
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        .about .section-heading {
+            color: var(--white-color);
         }
 
-        .contact-info, .contact-form-wrapper {
-            flex: 1;
-            min-width: 300px;
+        .about p {
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
-        .contact-info h3 {
-            color: var(--text-color);
-            margin-bottom: 1em;
-        }
-
-        .contact-info p {
-            margin-bottom: 0.5em;
-            display: flex;
-            align-items: center;
-        }
-
-        .contact-info i {
-            color: var(--primary-color);
-            margin-right: 0.8em;
-            font-size: 1.2em;
+        .contact {
+            background-color: var(--background-light);
         }
 
         .contact-form {
-            background-color: var(--white);
-            padding: 2.5rem;
-            border-radius: var(--border-radius-soft);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--white-color);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
 
         .contact-form label {
             display: block;
-            margin-bottom: 0.5em;
-            font-weight: 700;
-            color: var(--text-color);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--secondary-color);
+            font-weight: 500;
         }
 
         .contact-form input[type="text"],
         .contact-form input[type="email"],
         .contact-form textarea {
             width: 100%;
-            padding: 0.8em;
-            margin-bottom: 1.5em;
-            border: 1px solid var(--gray-light);
-            border-radius: var(--border-radius-soft);
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             font-family: 'DM Sans', sans-serif;
-            font-size: 1em;
-            color: var(--text-color);
-            transition: border-color var(--transition-speed);
+            font-size: 1rem;
         }
 
-        .contact-form input:focus,
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
         .contact-form textarea:focus {
             outline: none;
             border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(224, 122, 95, 0.2);
         }
 
         .contact-form textarea {
@@ -394,429 +232,144 @@
         }
 
         .contact-form .btn {
-            width: auto;
-            display: block;
-            margin-top: 1em;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2rem;
         }
 
-        #form-message {
-            margin-top: 1.5em;
-            padding: 1em;
-            border-radius: var(--border-radius-soft);
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--white-color);
             text-align: center;
-            display: none; /* Hidden by default */
+            padding: 30px 0;
+            font-size: 0.9rem;
         }
 
-        #form-message.success {
-            background-color: #d4edda; /* Light green */
-            color: #155724; /* Dark green */
-            border: 1px solid #c3e6cb;
-        }
-
-        #form-message.error {
-            background-color: #f8d7da; /* Light red */
-            color: #721c24; /* Dark red */
-            border: 1px solid #f5c6cb;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: var(--text-color); /* Dark background for footer */
-            color: var(--white);
-            padding: 3rem 0;
-            text-align: center;
-            font-size: 0.9em;
-        }
-
-        .footer .container {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .footer-nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
-
-        .footer-nav a {
-            color: var(--white);
-            font-weight: 400;
-        }
-
-        .footer-nav a:hover {
-            color: var(--primary-color);
-        }
-
-        .social-links {
-            margin-top: 1em;
-        }
-
-        .social-links a {
-            color: var(--white);
-            font-size: 1.5em;
-            margin: 0 0.8em;
-            transition: color var(--transition-speed);
-        }
-
-        .social-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Responsive Design */
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-            .header .container {
-                flex-wrap: wrap;
-            }
-
-            .nav-menu {
-                display: none; /* Hide navigation by default */
-                width: 100%;
-                flex-direction: column;
-                background-color: var(--white);
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-                position: absolute;
-                top: 100%; /* Position below header */
-                left: 0;
-                padding: 1rem 0;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .nav-menu li {
-                margin: 0;
-                text-align: center;
-                border-bottom: 1px solid var(--gray-light);
-            }
-
-            .nav-menu li:last-child {
-                border-bottom: none;
-            }
-
-            .nav-menu a {
-                display: block;
-                padding: 1rem;
-            }
-
-            .hamburger {
-                display: flex; /* Show hamburger icon */
-            }
-
             .hero h1 {
-                font-size: 2.5em;
+                font-size: 2.5rem;
             }
 
             .hero p {
-                font-size: 1.1em;
+                font-size: 1.2rem;
             }
 
-            .section-title h2 {
-                font-size: 2em;
+            .section-heading {
+                font-size: 2rem;
             }
 
-            .about-content {
+            nav ul {
+                display: none; /* Simple mobile navigation for now */
+            }
+
+            header .container {
                 flex-direction: column;
-            }
-
-            .about-content img {
-                max-width: 100%;
-            }
-
-            .contact-content {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .contact-info, .contact-form-wrapper {
-                min-width: auto;
-                width: 100%;
-            }
-
-            .footer .container {
-                flex-direction: column;
-            }
-
-            .footer-nav ul {
-                flex-direction: column;
-                gap: 0.5rem;
+                gap: 15px;
             }
         }
 
         @media (max-width: 480px) {
-            h1 { font-size: 2.2em; }
-            h2 { font-size: 1.8em; }
-            h3 { font-size: 1.5em; }
-
-            .hero {
-                padding: 4rem 0;
+            .hero h1 {
+                font-size: 2rem;
             }
 
-            .header .logo {
-                font-size: 1.5em;
+            .hero p {
+                font-size: 1rem;
             }
 
-            .container {
-                padding: 0 1rem;
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+
+            .section-heading {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+
+            .features, .about, .contact {
+                padding: 50px 0;
+            }
+
+            .contact-form {
+                padding: 30px;
             }
         }
     </style>
 </head>
 <body>
-    <header class="header">
+    <header>
         <div class="container">
-            <a href="#" class="logo">Purrfect<span>Palate</span></a>
+            <a href="#" class="logo">Purrfect Bites</a>
             <nav>
-                <button class="hamburger" aria-label="Toggle navigation menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#features">Why Us?</a></li>
+                <ul>
+                    <li><a href="#features">Brands</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section id="hero" class="hero">
-            <div class="container">
-                <h1>Find the Purrfect Food for Your Feline Friend</h1>
-                <p>Unbiased, in-depth reviews and comparisons of the best cat food brands to ensure your cat gets the nutrition they deserve.</p>
-                <a href="#reviews" class="btn">Explore Reviews</a>
-            </div>
-        </section>
-
-        <section id="features">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Why Trust Purrfect Palate Reviews?</h2>
-                </div>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <i class="fas fa-star"></i>
-                        <h3>Unbiased Reviews</h3>
-                        <p>We provide honest, data-driven reviews without influence from brands, ensuring transparency and reliability.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-microscope"></i>
-                        <h3>Detailed Analysis</h3>
-                        <p>Our experts dive deep into ingredients, nutritional value, and sourcing for comprehensive insights.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-balance-scale"></i>
-                        <h3>Comparative Insights</h3>
-                        <p>Easily compare different brands and formulas side-by-side to find the best match for your cat's needs.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-heartbeat"></i>
-                        <h3>Health & Wellness Focus</h3>
-                        <p>Prioritizing your cat's health, we highlight foods that support various life stages and dietary requirements.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Our Mission: Healthy Cats, Happy Owners</h2>
-                </div>
-                <div class="about-content">
-                    <img src="https://images.unsplash.com/photo-1574144611937-01cd8f886f3f?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cat eating food happily" width="600" height="400">
-                    <div class="about-text">
-                        <p>At Purrfect Palate Reviews, we understand that your cat is more than just a pet – they're family. Choosing the right cat food is one of the most important decisions you make for their health and longevity. With countless brands and formulas on the market, it can be overwhelming to find the best option.</p>
-                        <p>That's where we come in. Our dedicated team of cat enthusiasts and nutrition researchers meticulously evaluates cat food products, providing you with clear, concise, and trustworthy information. We're here to cut through the marketing jargon and empower you with knowledge, ensuring every bite contributes to a vibrant, healthy life for your beloved companion.</p>
-                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="reviews">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Top-Rated Cat Food Reviews</h2>
-                </div>
-                <div class="reviews-grid">
-                    <div class="review-card">
-                        <h3>Whiskers' Delight Grain-Free</h3>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (4.5/5)
-                        </div>
-                        <p>An excellent choice for sensitive stomachs, with high-quality protein and essential nutrients. Cats love the taste!</p>
-                        <p class="author">- Jane D., Cat Owner</p>
-                    </div>
-                    <div class="review-card">
-                        <h3>Ocean Feast Senior Formula</h3>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (5/5)
-                        </div>
-                        <p>Specially formulated for senior cats, promoting joint health and easy digestion. Highly recommended by vets.</p>
-                        <p class="author">- Mark T., Feline Nutritionist</p>
-                    </div>
-                    <div class="review-card">
-                        <h3>Kitten's First Steps Dry Food</h3>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (4/5)
-                        </div>
-                        <p>A solid option for growing kittens, offering balanced nutrition and a palatable texture for little ones.</p>
-                        <p class="author">- Emily R., Breeder</p>
-                    </div>
-                    <div class="review-card">
-                        <h3>Indoor Feline Weight Control</h3>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (4.5/5)
-                        </div>
-                        <p>Helps maintain a healthy weight for indoor cats with moderate activity levels. Rich in fiber.</p>
-                        <p class="author">- Sarah L., Pet Parent</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Get in Touch with Our Team</h2>
-                </div>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3>Have a question or a review suggestion?</h3>
-                        <p><i class="fas fa-envelope"></i> info@purrfectpalate.com</p>
-                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                        <p><i class="fas fa-map-marker-alt"></i> 123 Catnip Lane, Feline City, CA 90210</p>
-                        <p>We're always happy to hear from fellow cat lovers and welcome your feedback or suggestions for new brands to review.</p>
-                    </div>
-                    <div class="contact-form-wrapper">
-                        <form class="contact-form" id="contactForm">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject">
-
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
-
-                            <button type="submit" class="btn">Send Message</button>
-                            <div id="form-message"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
+    <section class="hero">
         <div class="container">
-            <div class="footer-nav">
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#features">Why Us?</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            <h1>Find the Purrfect Food for Your Feline Friend</h1>
+            <p>Unbiased reviews, ingredient breakdowns, and nutritional insights to help you choose the best cat food for a happy, healthy cat.</p>
+            <a href="#features" class="btn">Explore Reviews Now</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-heading">Why Choose Purrfect Bites?</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <h3>In-Depth Analysis</h3>
+                    <p>We delve deep into ingredients, nutritional profiles, and sourcing practices to give you the full picture of every brand.</p>
+                </div>
+                <div class="card">
+                    <h3>Real Cat Owner Reviews</h3>
+                    <p>Hear from fellow cat parents about their experiences, preferences, and results with various cat food options.</p>
+                </div>
+                <div class="card">
+                    <h3>Compare Brands Easily</h3>
+                    <p>Our intuitive platform allows you to quickly compare top brands side-by-side on key metrics that matter most.</p>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-            </div>
-            <p>&copy; 2023 Purrfect Palate Reviews. All rights reserved.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-heading">About Purrfect Bites</h2>
+            <p>At Purrfect Bites, we believe that every cat deserves the best nutrition. Founded by a team of passionate cat lovers and pet nutrition enthusiasts, our mission is to cut through the marketing fluff and provide clear, honest, and comprehensive reviews of cat food brands.</p>
+            <p>We know how overwhelming it can be to choose from hundreds of options. That's why we're dedicated to empowering you with the knowledge needed to make informed decisions, ensuring your beloved feline companion thrives on a diet perfectly suited to their needs.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-heading">Get in Touch</h2>
+            <form class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Purrfect Bites. All rights reserved. Made with love for cats.</p>
         </div>
     </footer>
-
-    <script>
-        // Hamburger menu functionality
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-
-        if (hamburger && navMenu) {
-            hamburger.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-            });
-        }
-
-        // Close nav menu when a link is clicked (for mobile)
-        document.querySelectorAll('.nav-menu a').forEach(item => {
-            item.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Contact form handler
-        const contactForm = document.getElementById('contactForm');
-        const formMessage = document.getElementById('form-message');
-
-        if (contactForm && formMessage) {
-            contactForm.addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent default form submission
-
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const subject = document.getElementById('subject').value;
-                const message = document.getElementById('message').value;
-
-                // Basic validation
-                if (!name || !email || !message) {
-                    formMessage.textContent = 'Please fill in all required fields.';
-                    formMessage.className = 'error';
-                    formMessage.style.display = 'block';
-                    return;
-                }
-
-                // Simulate server submission
-                formMessage.textContent = 'Sending message...';
-                formMessage.className = ''; // Clear previous states
-                formMessage.style.display = 'block';
-
-                setTimeout(() => {
-                    // Simulate success or failure
-                    const success = Math.random() > 0.2; // 80% chance of success
-
-                    if (success) {
-                        formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
-                        formMessage.className = 'success';
-                        contactForm.reset(); // Clear the form
-                    } else {
-                        formMessage.textContent = 'Oops! Something went wrong. Please try again later.';
-                        formMessage.className = 'error';
-                    }
-                }, 1500); // Simulate network delay
-            });
-        }
-    </script>
 </body>
 </html>
